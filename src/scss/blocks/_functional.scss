@@ -15,10 +15,14 @@
 			letter-spacing: 0.08em;
 		}
 	}
-
+	
 	&__main {
+		margin-top: 100px;
 		display: flex;
 		justify-content: center;
+		.functional__phone {
+			@include adaptive-width(438, 283);
+		}
 	}
 }
 
@@ -26,7 +30,16 @@
 	display: flex;
 	flex-wrap: wrap;
 	&__feature {
-		@include adaptive-width(437, 337);
+		display: flex;
+		// justify-content: space-between;
+		align-items: center;
+		.features__descr {
+			@include adaptive-width(321, 264);
+			.features__header {
+				margin-top: 3px;
+				margin-bottom: 11px;
+			}
+		}
 		.feature-icon {
 			border-radius: 50%;
 			width: 90px;
@@ -36,5 +49,8 @@
 			justify-content: center;
 			align-items: center;
 		}
+	}
+	&__feature_reverse {
+		flex-direction: row-reverse;
 	}
 }
