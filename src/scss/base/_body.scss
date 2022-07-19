@@ -1,0 +1,45 @@
+@font-face {
+	font-family: "Jost";
+	src: 
+		// url(/src/fonts/Jost-Italic-VariableFont_wght.ttf) format("truetype"),
+		// url(/src/fonts/Jost-Medium.woff2) format("woff2"),
+		// url(/src/fonts/jost-variablefont_wght-webfont.woff2) format("woff2"),
+		url(/src/fonts/Jost-VariableFont_wght.ttf) format("truetype");
+}
+
+body {	
+	width: 100%;
+	margin: 0;
+	font-family: "Jost";
+	line-height: 124%;
+	h1 {
+		margin: 0;
+	}
+	h2 {
+		margin: 0;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	p {
+		margin: 0;
+	}
+	// .violet-bg-top {
+	// 	background-image: url("../assets/img/topwave.png");		
+	// }
+}
+
+.frame {
+	margin: 0 auto;
+	padding: 4vh 2vw;
+	max-width: 1590px;
+	// border: 2px blue dotted;
+}
+
+.violet-bg-top {
+	background-image: url("/src/img/topwave.svg");
+	height: 1000px;
+	// border: 2px red dotted;
+}

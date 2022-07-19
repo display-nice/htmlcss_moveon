@@ -1,0 +1,59 @@
+.intro {
+	display: flex;
+	justify-content: space-evenly;
+	color: $mtc;
+	margin-top: 2vw;
+}
+.intro__description {
+	// width: calc(335px + 215 * (100vw / 1920));
+	@include adaptive-width(550, 335);
+	padding-top: calc(216px - 66px);
+	display: flex;
+	flex-direction: column;
+
+	.intro__header {
+		font-family: "Jost";
+		font-size: calc(28px + 20 * (100vw / 1920));
+		font-weight: 700;
+		line-height: 124%;
+		font-style: normal;
+	}
+	.intro__text {
+		margin-top: 14px;
+		font-size: calc(18px + 2 * (100vw / 1920));
+	}
+	.intro__buttons {
+		margin-top: 44px;
+		width: 420px;
+		display: flex;
+		justify-content: space-between;
+		.store-button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: calc(50% - 10px);
+			height: 53px;
+			border-radius: 50px;
+			background: transparent;
+			border: 2px solid $mtc;
+			color: $mtc;
+			.store-button__text {
+				margin-left: 5px;
+				font-weight: 700;
+			}
+		}
+		.store-button:hover {
+			background: $mtc;
+			color: #A658DB;
+			.store-button__icon {
+				fill:#A658DB;
+			}
+		}
+	}
+}
+.intro__two-phones {
+	.intro__img {
+		// width: calc(271px + 375 * (100vw / 1920));
+		@include adaptive-width(646, 271)
+	}
+}

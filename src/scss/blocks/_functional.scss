@@ -1,0 +1,40 @@
+.functional {
+	margin-top: 2vw;
+	&__header-wrapper {		
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		.functional__header {
+			@include adaptive-font(46, 36);
+		}
+		.functional__descr {
+			@include adaptive-font(18, 14);
+			@include adaptive-width(424, 335);
+			margin-top: 3vw;
+			letter-spacing: 0.08em;
+		}
+	}
+
+	&__main {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.features {
+	display: flex;
+	flex-wrap: wrap;
+	&__feature {
+		@include adaptive-width(437, 337);
+		.feature-icon {
+			border-radius: 50%;
+			width: 90px;
+			height: 90px;
+			background: linear-gradient(#8754D9 0, #A658DB 50%);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
