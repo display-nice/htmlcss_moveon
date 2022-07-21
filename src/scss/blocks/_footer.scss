@@ -1,0 +1,51 @@
+.violet-bg-bot {
+	background: url("/src/img/botwave.svg") no-repeat;
+	height: 522px;
+	object-fit: fill;
+}
+
+.footer {
+	color: $mtc;
+	// margin-top: 5%;
+	.footer__main {
+		display: flex;
+		justify-content: space-between;
+		.footer__about {
+			@include adaptive-width(518, 335)
+		}
+	
+		.footer__contacts {
+			width: 315px;
+		}
+	}
+}
+
+.footer__title {
+	@include adaptive-font(28, 22);
+	line-height: 124%;
+}
+.footer__text {
+	@include adaptive-font(18, 14);
+	
+	line-height: 160%;
+}
+.footer__line {
+	// margin: 5% 0;
+	width: 100%;
+	height: 1px;
+	background: $mtc;
+}
+
+.footer__copyright {
+	text-align: center;
+	.footer_copyright-text {
+		// margin-bottom: 5%;
+		display: inline-block;
+		@include adaptive-font(20, 18);
+	}
+}
+
+.social_footer {
+	justify-content: start;
+	gap: 10%;
+}
