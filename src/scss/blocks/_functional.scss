@@ -16,25 +16,30 @@
 		}
 	}
 	
-	&__main {
+	.functional__main {
 		margin-top: 100px;
 		display: flex;
-		justify-content: center;
-		.functional__phone {
-			@include adaptive-width(438, 283);
-		}
+		justify-content: space-between;		
 	}
+}
+
+.functional__phone {
+	@include adaptive-width(437, 283);
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .features {
 	display: flex;
-	flex-wrap: wrap;
-	&__feature {
+	flex-direction: column;
+	justify-content: space-around;
+	.features__feature {
+		@include adaptive-width(437, 337);
 		display: flex;
-		// justify-content: space-between;
+		justify-content: space-around;
 		align-items: center;
 		.features__descr {
-			@include adaptive-width(321, 264);
+			@include adaptive-width(300, 264);
 			.features__header {
 				margin-top: 3px;
 				margin-bottom: 11px;
@@ -50,7 +55,7 @@
 			align-items: center;
 		}
 	}
-	&__feature_reverse {
+	.features__feature_reverse {
 		flex-direction: row-reverse;
 	}
 }
