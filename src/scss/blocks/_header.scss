@@ -1,3 +1,14 @@
+.violet-bg-top {
+	background-image: url("/src/img/topwave.svg");
+	// @include adaptive-width(1750, 320);
+	// background-size: calc(1920px - 370 * (100vw / 1920));
+	// height: 60vw;
+	height: adaptiveSizePx(1100, 200);
+	background-repeat: no-repeat;
+	object-fit: fill;
+	// border: 2px red dotted;
+}
+
 .header {
 	display: flex;
 	justify-content: space-between;
@@ -6,11 +17,13 @@
 		vertical-align: middle;
 		font-family: "Jost";
 		font-weight: 400;
-		font-size: calc(24px + 16 * (100vw / 1920));
-		line-height: 44.64px;
+		// @include adaptive-font(36, 24);
+		// font-size: calc(24px + 16 * (100vw / 1920));
+		font-size: adaptiveSizePx(36, 24);
+		line-height: 124%;
 	}
 	.header__buttons {
-		min-width: 535px;
+		min-width: 662px;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -20,11 +33,12 @@
 	display: flex;
 	align-items: center;
 	.menu__list {
-		min-width: 410px;
+		min-width: 526px;
 		display: flex;
 		justify-content: space-between;
 		.menu__item {
-			font-size: calc(14px + 4 * (100vw / 1920));
+			font-size: adaptiveSizePx(20, 16);
+			line-height: 124%;
 			border-bottom: 1px solid transparent;
 		}
 		.menu__item:hover {
@@ -41,11 +55,13 @@
 	min-width: 107px;
 	.social__item {
 		.social__link {
-			.social__icon {
-				width: 25px;
-				height: 25px;
+			.social__icon {				
 				border: 1px solid transparent;
 				border-radius: 50%;
+			}
+			.social__icon_small {
+				width: 25px;
+				height: 25px;
 			}
 			.social__icon:hover {
 				border: 1px solid $mtc;

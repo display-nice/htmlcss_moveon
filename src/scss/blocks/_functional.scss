@@ -6,11 +6,14 @@
 		align-items: center;
 		text-align: center;
 		.functional__header {
-			@include adaptive-font(46, 36);
+			// @include adaptive-font(46, 36);
+			font-size: adaptiveSizePx(46, 36);
 		}
 		.functional__descr {
-			@include adaptive-font(18, 14);
-			@include adaptive-width(424, 335);
+			// @include adaptive-font(18, 14);
+			font-size: adaptiveSizePx(18, 14);
+			// @include adaptive-width(424, 335);
+			width: adaptiveSizePx(424, 335);
 			margin-top: 3vw;
 			letter-spacing: 0.08em;
 		}
@@ -24,9 +27,10 @@
 }
 
 .functional__phone {
-	@include adaptive-width(437, 283);
-	padding-left: 10px;
-	padding-right: 10px;
+	// @include adaptive-width(437, 283);
+	width: adaptiveSizePx(437, 100);
+	padding-left: adaptiveSizePx(10, 5);
+	padding-right: adaptiveSizePx(10, 5);
 }
 
 .features {
@@ -34,21 +38,30 @@
 	flex-direction: column;
 	justify-content: space-around;
 	.features__feature {
-		@include adaptive-width(437, 337);
+		width: adaptiveSizePx(437, 100);
+		// @include adaptive-width(437, 337);
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
 		.features__descr {
-			@include adaptive-width(300, 264);
+			// width: adaptiveSizePx(300, 100);
+			height: 130px;
+			// @include adaptive-width(300, 264);
 			.features__header {
-				margin-top: 3px;
-				margin-bottom: 11px;
+				font-size: adaptiveSizePx(22, 14);
+				margin-top: adaptiveSizePx(3, 1);
+				margin-bottom: adaptiveSizePx(11, 5);
+			}
+			.features__text {
+				font-size: adaptiveSizePx(18, 12);
 			}
 		}
 		.feature-icon {
 			border-radius: 50%;
-			width: 90px;
-			height: 90px;
+			width: adaptiveSizePx(90, 60);
+			height: adaptiveSizePx(90, 60);
+			// margin-left: adaptiveSizePx(8, 4);
+			// margin-right: adaptiveSizePx(8, 4);
 			background: linear-gradient(#8754D9 0, #A658DB 50%);
 			display: flex;
 			justify-content: center;
