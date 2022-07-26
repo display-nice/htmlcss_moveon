@@ -2,68 +2,53 @@
 	display: flex;
 	justify-content: space-evenly;
 	color: $mtc;
-	// margin-top: calc(50px + 1 * (100vh / 1080));
-	// margin-top: calc(50 * (100vh / 1080));
-	margin-top: adaptiveSizePx(50, 1)
-	// padding-top: 100%;
-	// margin-top: 50px;
-}
-.intro__description {
-	// width: calc(335px + 215 * (100vw / 1920));
-	// @include adaptive-width(550, 335);
-	width: adaptiveSizePx(550, 335);
-	// padding-top: 150px;
-	// padding-top: 7rem;
-	padding-top: adaptiveSizePx(149, 1);
-	display: flex;
-	flex-direction: column;
-
-	.intro__header {
+	margin-top: adaptiveSizePx(50, 1);
+	&__description {
+		width: adaptiveSizePx(550, 335);
+		padding-top: adaptiveSizePx(149, 1);
+		display: flex;
+		flex-direction: column;
+	}
+	&__header {
 		font-family: "Jost";
 		font-size: adaptiveSizePx(48, 28);
 		font-weight: 700;
 		line-height: 124%;
 		font-style: normal;
 	}
-	.intro__text {
+	&__text {
 		margin-top: adaptiveSizePx(14, 1);
 		font-size: adaptiveSizePx(20, 18);
 	}
-	.intro__buttons {
+	&__buttons {
 		margin-top: adaptiveSizePx(44, 1);
 		width: adaptiveSizePx(420, 300);
-		// width: calc(260px + 160 * (100vw / 1920));
 		display: flex;
 		justify-content: space-between;
-		.store-button {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: calc(50% - 10px);
-			height: 53px;
-			border-radius: 50px;
-			background: transparent;
-			border: 2px solid $mtc;
-			color: $mtc;
-			.store-button__text {
-				margin-left: adaptiveSizePx(5, 1);
-				font-weight: 700;
-			}
-		}
-		.store-button:hover {
-			background: $mtc;
-			color: #A658DB;
-			.store-button__icon {
-				fill:#A658DB;
-			}
-		}
+	}
+	&__img {
+		width: adaptiveSizePx(646, 100);
 	}
 }
-.intro__two-phones {
-	.intro__img {
-		// width: calc(271px + 375 * (100vw / 1920));
-		width: adaptiveSizePx(646, 100);
-		// @include adaptive-width(646, 1)
-		// width: 300px;
+.store-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: calc(50% - 10px);
+	height: 53px;
+	border-radius: 50px;
+	background: transparent;
+	border: 2px solid $mtc;
+	color: $mtc;
+	&__text {
+		margin-left: adaptiveSizePx(5, 1);
+		font-weight: 700;
+	}
+}
+.store-button:hover {
+	background: $mtc;
+	color: $main1;
+	.store-button__icon {
+		fill:$main1;
 	}
 }

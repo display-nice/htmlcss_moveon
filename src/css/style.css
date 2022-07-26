@@ -3,8 +3,6 @@
   src: url(/src/fonts/Jost-VariableFont_wght.ttf) format("truetype");
 }
 body {
-  width: 100%;
-  height: 100%;
   margin: 0;
   font-family: "Jost";
   line-height: 124%;
@@ -24,18 +22,22 @@ body p {
   margin: 0;
 }
 
+.violet-bg-top {
+  background: url("/src/img/topwave.svg") no-repeat;
+  height: calc(200px + 900 * (100vw / 1920));
+  background-size: 100% 100%;
+}
+
 .frame {
   margin: 0 auto;
   padding: 4vh 2vw;
   max-width: 1590px;
 }
 
-.violet-bg-top {
-  background-image: url("/src/img/topwave.svg");
-  height: calc(200px + 900 * (100vw / 1920));
-  background-repeat: no-repeat;
-  -o-object-fit: fill;
-     object-fit: fill;
+.violet-bg-bot {
+  background: url("/src/img/botwave.svg") no-repeat;
+  background-size: 100% 100%;
+  height: 522px;
 }
 
 .header {
@@ -47,14 +49,14 @@ body p {
           justify-content: space-between;
   color: white;
 }
-.header .header__logo {
+.header__logo {
   vertical-align: middle;
   font-family: "Jost";
   font-weight: 400;
   font-size: calc(24px + 12 * (100vw / 1920));
   line-height: 124%;
 }
-.header .header__buttons {
+.header__buttons {
   min-width: 662px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,7 +74,7 @@ body p {
       -ms-flex-align: center;
           align-items: center;
 }
-.menu .menu__list {
+.menu__list {
   min-width: 526px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -81,12 +83,12 @@ body p {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.menu .menu__list .menu__item {
+.menu__item {
   font-size: calc(16px + 4 * (100vw / 1920));
   line-height: 124%;
   border-bottom: 1px solid transparent;
 }
-.menu .menu__list .menu__item:hover {
+.menu__item:hover {
   border-bottom: 1px solid white;
 }
 
@@ -102,21 +104,21 @@ body p {
           align-items: center;
   min-width: 107px;
 }
-.social .social__item .social__link .social__icon {
+.social__icon {
   border: 1px solid transparent;
   border-radius: 50%;
 }
-.social .social__item .social__link .social__icon_small {
+.social__icon_small {
   width: 25px;
   height: 25px;
 }
-.social .social__item .social__link .social__icon:hover {
+.social__icon:hover {
   border: 1px solid white;
 }
-.social .social__item .social__link .social__icon:hover ellipse {
+.social__icon:hover ellipse {
   fill: #8754D9;
 }
-.social .social__item .social__link .social__icon:hover path {
+.social__icon:hover path {
   fill: white;
 }
 
@@ -130,7 +132,6 @@ body p {
   color: white;
   margin-top: calc(1px + 49 * (100vw / 1920));
 }
-
 .intro__description {
   width: calc(335px + 215 * (100vw / 1920));
   padding-top: calc(1px + 148 * (100vw / 1920));
@@ -142,18 +143,18 @@ body p {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.intro__description .intro__header {
+.intro__header {
   font-family: "Jost";
   font-size: calc(28px + 20 * (100vw / 1920));
   font-weight: 700;
   line-height: 124%;
   font-style: normal;
 }
-.intro__description .intro__text {
+.intro__text {
   margin-top: calc(1px + 13 * (100vw / 1920));
   font-size: calc(18px + 2 * (100vw / 1920));
 }
-.intro__description .intro__buttons {
+.intro__buttons {
   margin-top: calc(1px + 43 * (100vw / 1920));
   width: calc(300px + 120 * (100vw / 1920));
   display: -webkit-box;
@@ -163,7 +164,11 @@ body p {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.intro__description .intro__buttons .store-button {
+.intro__img {
+  width: calc(100px + 546 * (100vw / 1920));
+}
+
+.store-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,24 +185,21 @@ body p {
   border: 2px solid white;
   color: white;
 }
-.intro__description .intro__buttons .store-button .store-button__text {
+.store-button__text {
   margin-left: calc(1px + 4 * (100vw / 1920));
   font-weight: 700;
 }
-.intro__description .intro__buttons .store-button:hover {
+
+.store-button:hover {
   background: white;
   color: #A658DB;
 }
-.intro__description .intro__buttons .store-button:hover .store-button__icon {
+.store-button:hover .store-button__icon {
   fill: #A658DB;
 }
 
-.intro__two-phones .intro__img {
-  width: calc(100px + 546 * (100vw / 1920));
-}
-
 .functional {
-  margin-top: 2vw;
+  margin-top: 2.5vw;
 }
 .functional__header-wrapper {
   display: -webkit-box;
@@ -212,16 +214,17 @@ body p {
           align-items: center;
   text-align: center;
 }
-.functional__header-wrapper .functional__header {
+.functional__header {
   font-size: calc(36px + 10 * (100vw / 1920));
 }
-.functional__header-wrapper .functional__descr {
+.functional__descr {
+  color: #B0B0B0;
   font-size: calc(14px + 4 * (100vw / 1920));
   width: calc(335px + 89 * (100vw / 1920));
-  margin-top: 3vw;
+  margin-top: 2.5vw;
   letter-spacing: 0.08em;
 }
-.functional .functional__main {
+.functional__main {
   margin-top: calc(50px + 50 * (100vw / 1920));
   display: -webkit-box;
   display: -ms-flexbox;
@@ -231,7 +234,6 @@ body p {
           justify-content: space-evenly;
   gap: 10px;
 }
-
 .functional__phone {
   width: calc(100px + 337 * (100vw / 1920));
 }
@@ -248,34 +250,42 @@ body p {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-.features .features__feature {
+.features__feature {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
 }
-.features .features__feature .features__descr {
+.features__feature_reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.features__descr {
   width: calc(1px + 436 * (100vw / 1920));
   height: calc(1px + 436 * (100vw / 1920));
   max-height: 130px;
 }
-.features .features__feature .features__descr .features__header {
+.features__header {
   text-align: right;
   font-size: calc(14px + 8 * (100vw / 1920));
   margin-top: calc(1px + 2 * (100vw / 1920));
   margin-bottom: calc(5px + 6 * (100vw / 1920));
 }
-.features .features__feature .features__descr .features__header_left-align {
+.features__header_left-align {
   text-align: left;
 }
-.features .features__feature .features__descr .features__text {
+.features__text {
+  color: #B0B0B0;
   text-align: right;
   font-size: calc(12px + 6 * (100vw / 1920));
 }
-.features .features__feature .features__descr .features__text_left-align {
+.features__text_left-align {
   text-align: left;
 }
-.features .features__feature .feature-icon {
+
+.feature-icon {
   border-radius: 50%;
   width: calc(60px + 30 * (100vw / 1920));
   height: calc(60px + 30 * (100vw / 1920));
@@ -291,25 +301,12 @@ body p {
       -ms-flex-align: center;
           align-items: center;
 }
-.features .features__feature_reverse {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
-.violet-bg-bot {
-  background: url("/src/img/botwave.svg") no-repeat;
-  height: 522px;
-  -o-object-fit: fill;
-     object-fit: fill;
-}
 
 .footer {
   color: white;
-  margin-top: 160px;
+  margin-top: 150px;
 }
-.footer .footer__main {
+.footer__main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,36 +314,32 @@ body p {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.footer .footer__main .footer__about {
+.footer__about {
   width: calc(200px + 318 * (100vw / 1920));
 }
-.footer .footer__main .footer__contacts {
-  width: calc(210px + 105 * (100vw / 1920));
-}
-
 .footer__title {
   font-size: calc(22px + 6 * (100vw / 1920));
   line-height: 124%;
   margin-bottom: calc(1px + 12 * (100vw / 1920));
 }
-
 .footer__text {
   font-size: calc(14px + 4 * (100vw / 1920));
   line-height: 160%;
 }
-
+.footer__contacts {
+  width: calc(210px + 105 * (100vw / 1920));
+}
 .footer__line {
   background: white;
-  margin-top: calc(57px + 27 * (100vw / 1920));
+  margin-top: calc(50px + 25 * (100vw / 1920));
   width: 100%;
   height: 1px;
 }
-
 .footer__copyright {
-  margin-top: calc(38px + 10 * (100vw / 1920));
+  margin-top: calc(30px + 8 * (100vw / 1920));
   text-align: center;
 }
-.footer__copyright .footer_copyright-text {
+.footer__copyright-text {
   display: inline-block;
   font-size: calc(18px + 2 * (100vw / 1920));
 }

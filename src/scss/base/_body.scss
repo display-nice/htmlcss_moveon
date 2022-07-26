@@ -1,15 +1,10 @@
 @font-face {
 	font-family: "Jost";
 	src: 
-		// url(/src/fonts/Jost-Italic-VariableFont_wght.ttf) format("truetype"),
-		// url(/src/fonts/Jost-Medium.woff2) format("woff2"),
-		// url(/src/fonts/jost-variablefont_wght-webfont.woff2) format("woff2"),
 		url(/src/fonts/Jost-VariableFont_wght.ttf) format("truetype");
 }
 
 body {
-	width: 100%;
-	height: 100%;
 	margin: 0;
 	font-family: "Jost";
 	line-height: 124%;
@@ -27,14 +22,24 @@ body {
 	p {
 		margin: 0;
 	}
-	// .violet-bg-top {
-	// 	background-image: url("../assets/img/topwave.png");		
-	// }
+}
+
+.violet-bg-top {
+	background: url("/src/img/topwave.svg") no-repeat;
+	height: adaptiveSizePx(1100, 200);
+	background-size: 100% 100%; // оптимизация для фаерфокса
+	// object-fit: fill;
 }
 
 .frame {
 	margin: 0 auto;
 	padding: 4vh 2vw;
 	max-width: 1590px;
-	// border: 2px blue dotted;
+}
+
+.violet-bg-bot {
+	background: url("/src/img/botwave.svg") no-repeat;
+	background-size: 100% 100%; // оптимизация для фаерфокса
+	height: 522px;
+	// object-fit: fill;
 }
