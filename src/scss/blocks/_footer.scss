@@ -17,39 +17,37 @@
 		justify-content: space-between;
 
 		.footer__about {
-			@include adaptive-width(518, 335)
+			width: adaptiveSizePx(518, 200);
 		}
 	
 		.footer__contacts {
-			width: 315px;
+			width: adaptiveSizePx(315, 210);
 		}
 	}
 }
 
 .footer__title {
-	@include adaptive-font(28, 22);
+	font-size: adaptiveSizePx(28, 22);
 	line-height: 124%;
-	margin-bottom: 13px;
+	margin-bottom: adaptiveSizePx(13, 1);
 }
 .footer__text {
-	@include adaptive-font(18, 14);	
+	font-size: adaptiveSizePx(18, 14);
 	line-height: 160%;
 }
 .footer__line {
-	// margin: 2vw 0;
-	margin-top: 60px;
+	background: $mtc;
+	margin-top: adaptiveSizePx(84, 57);
 	width: 100%;
 	height: 1px;
-	background: $mtc;
 }
 
 .footer__copyright {
-	margin-top: 48px;
+	margin-top: adaptiveSizePx(48, 38);
 	text-align: center;
 	.footer_copyright-text {
-		// margin: 4vw;
 		display: inline-block;
-		@include adaptive-font(20, 18);
+		font-size: adaptiveSizePx(20, 18);
 	}
 }
 

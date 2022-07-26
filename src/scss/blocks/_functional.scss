@@ -6,13 +6,10 @@
 		align-items: center;
 		text-align: center;
 		.functional__header {
-			// @include adaptive-font(46, 36);
 			font-size: adaptiveSizePx(46, 36);
 		}
 		.functional__descr {
-			// @include adaptive-font(18, 14);
 			font-size: adaptiveSizePx(18, 14);
-			// @include adaptive-width(424, 335);
 			width: adaptiveSizePx(424, 335);
 			margin-top: 3vw;
 			letter-spacing: 0.08em;
@@ -43,13 +40,23 @@
 			height: adaptiveSizePx(437, 1);
 			max-height: 130px;
 			.features__header {
+				text-align: right;
 				font-size: adaptiveSizePx(22, 14);
 				margin-top: adaptiveSizePx(3, 1);
 				margin-bottom: adaptiveSizePx(11, 5);
 			}
+			.features__header_left-align {
+				text-align: left;
+			}
+			
 			.features__text {
+				text-align: right;
 				font-size: adaptiveSizePx(18, 12);
 			}
+			.features__text_left-align {
+				text-align: left;
+			}
+
 		}
 		.feature-icon {
 			border-radius: 50%;
@@ -64,4 +71,5 @@
 	.features__feature_reverse {
 		flex-direction: row-reverse;
 	}
+
 }
