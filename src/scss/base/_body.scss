@@ -50,6 +50,11 @@ body {
 	// .frame {
 	// 	padding: 4vh 2%;
 	// }
+	.violet-bg-top {
+		// height: adaptiveSizePx(200, 1100);
+		height: adaptiveSize320Px(200, 1100);
+		// height: 1080px;
+	}
 	.violet-bg-bot {
 		min-height: 630px;
 	}

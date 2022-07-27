@@ -5,16 +5,33 @@ $main1: #A658DB;
 $main2: #8754D9;
 $designedMaxWidth: 1920;
 // width: calc(260px + 160 * (100vw / 1920)); // ручная формула адаптивного размера
+// width: calc(260px + (160 + 160 * 0.7) * ((100vw - 320px) / 1920)); // ручная формула адаптивного размера для 320рх
 
-@media (max-width: 909px) {
-	@function adaptiveSizePx($max, $min) {
-		$delta: $max - $min;
-		$mobDelta: $delta + $delta * 0.7;
-		$size: calc(#{$min + px} + #{$mobDelta} * ((100vw -320px) / #{$designedMaxWidth}));
-		@return $size;
-	}
+
+// Попытка упаковать функцию в медиа-запрос
+// @media (max-width: 909px) {
+// 	@function adaptiveSizePx($max, $min) {
+// 		$delta: $max - $min;
+// 		$mobDelta: $delta + $delta * 0.7;
+// 		$size: calc(#{$min + px} + #{$mobDelta} * ((100vw - 320px) / #{$designedMaxWidth}));
+// 		@return $size;
+// 	}
+// }
+
+// @media (min-width: 910px) {
+// 	@function adaptiveSizePx($max, $min) {
+// 		$delta: $max - $min;
+// 		$size: calc(#{$min + px} + #{$delta} * (100vw / #{$designedMaxWidth}));
+// 		@return $size;
+// 	}
+// }
+
+@function adaptiveSize320Px($max, $min) {
+	$delta: $max - $min;
+	$mobDelta: $delta + $delta * 0.7;
+	$size: calc(#{$min + px} + #{$mobDelta} * ((100vw - 320px) / #{$designedMaxWidth}));
+	@return $size;
 }
-
 
 @function adaptiveSizePx($max, $min) {
 	$delta: $max - $min;
