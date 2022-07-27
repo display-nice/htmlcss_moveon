@@ -6,33 +6,28 @@ $main2: #8754D9;
 $designedMaxWidth: 1920;
 // width: calc(260px + 160 * (100vw / 1920)); // ручная формула адаптивного размера
 
-@mixin adaptive-font($pcSize, $mobSize) {
-	$addSize: $pcSize - $mobSize;
-	$addMobSize: $addSize + $addSize * 0.7;
-	@media (max-width: 767px) {
-		font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$designedMaxWidth}));
-	}
-	@media (min-width: 767px) {
-		font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$designedMaxWidth}));
+@media (max-width: 909px) {
+	@function adaptiveSizePx($max, $min) {
+		$delta: $max - $min;
+		$mobDelta: $delta + $delta * 0.7;
+		$size: calc(#{$min + px} + #{$mobDelta} * ((100vw -320px) / #{$designedMaxWidth}));
+		@return $size;
 	}
 }
 
-@mixin adaptive-width($max, $min) {
-	$delta: $max - $min;
-	@media (min-width: 767px) {
-		width: calc(#{$min + px} + #{$delta} * (100vw / #{$designedMaxWidth}));
-	}
-	$mobileDelta: $delta + $delta * 0.7;
-	@media (max-width: 767px) {
-		width: calc(#{$min + px} + #{$mobileDelta} * ((100vw - 320px) / #{$designedMaxWidth}));
-	}
-}
 
 @function adaptiveSizePx($max, $min) {
 	$delta: $max - $min;
 	$size: calc(#{$min + px} + #{$delta} * (100vw / #{$designedMaxWidth}));
 	@return $size;
 }
+
+
+// @function adaptiveSizePx($max, $min) {
+// 	$delta: $max - $min;
+// 	$size: calc(#{$min + px} + #{$delta} * (100vw / #{$designedMaxWidth}));
+// 	@return $size;
+// }
 
 // оригинальная формула ширины
 // @mixin adaptive-width($pcSize, $mobSize) {
@@ -54,5 +49,28 @@ $designedMaxWidth: 1920;
 // 	}
 // 	@media (min-width: 767px) {
 // 		font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+// 	}
+// }
+
+// мои подредактированные миксины
+// @mixin adaptive-font($pcSize, $mobSize) {
+// 	$addSize: $pcSize - $mobSize;
+// 	$addMobSize: $addSize + $addSize * 0.7;
+// 	@media (max-width: 767px) {
+// 		font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$designedMaxWidth}));
+// 	}
+// 	@media (min-width: 767px) {
+// 		font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$designedMaxWidth}));
+// 	}
+// }
+
+// @mixin adaptive-width($max, $min) {
+// 	$delta: $max - $min;
+// 	@media (min-width: 767px) {
+// 		width: calc(#{$min + px} + #{$delta} * (100vw / #{$designedMaxWidth}));
+// 	}
+// 	$mobileDelta: $delta + $delta * 0.7;
+// 	@media (max-width: 767px) {
+// 		width: calc(#{$min + px} + #{$mobileDelta} * ((100vw - 320px) / #{$designedMaxWidth}));
 // 	}
 // }

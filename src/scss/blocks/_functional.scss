@@ -7,30 +7,31 @@
 		text-align: center;
 	}
 	&__header {
-		font-size: adaptiveSizePx(46, 36);
+		font-size: adaptiveSizePx(46, 26);
 	}
 	&__descr {
 		color: $ttc;
-		font-size: adaptiveSizePx(18, 14);
-		width: adaptiveSizePx(424, 335);
+		font-size: adaptiveSizePx(18, 12);
+		width: adaptiveSizePx(424, 307);
 		margin-top: 2.5vw;
 		letter-spacing: 0.08em;
 	}
 	&__main {
 		margin-top: adaptiveSizePx(100, 50);
 		display: flex;
-		justify-content: space-evenly;		
+		justify-content: space-evenly;
 		gap: 10px;
 	}
 	&__phone {
 		width: adaptiveSizePx(437, 100);
 	}
 }
+
 .features {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-
+	gap: 5px;
 	&__feature {
 		display: flex;
 		gap: 10px;		
@@ -38,14 +39,16 @@
 			flex-direction: row-reverse;
 		}
 	}
+
 	&__descr {
 		width: adaptiveSizePx(437, 1);
 		height: adaptiveSizePx(437, 1);
 		max-height: 130px;
 	}
+
 	&__header {
-		text-align: right;
-		font-size: adaptiveSizePx(22, 14);
+		// text-align: right;
+		font-size: adaptiveSizePx(22, 16);
 		margin-top: adaptiveSizePx(3, 1);
 		margin-bottom: adaptiveSizePx(11, 5);
 		&_left-align {
@@ -54,7 +57,7 @@
 	}
 	&__text {
 		color: $ttc;
-		text-align: right;
+		// text-align: right;
 		font-size: adaptiveSizePx(18, 12);
 		&_left-align {
 			text-align: left;
@@ -63,10 +66,67 @@
 }
 .feature-icon {
 	border-radius: 50%;
-	width: adaptiveSizePx(90, 60);
-	height: adaptiveSizePx(90, 60);
+	width: adaptiveSizePx(90, 54);
+	height: adaptiveSizePx(90, 54);
 	background: linear-gradient($main2 0, $main1 50%);
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+@media (max-width: 909px) {
+	.functional {
+
+		&__header-wrapper {
+		}
+
+		&__header {
+		}
+
+		&__descr {
+		}
+
+		&__main {
+			margin-top: adaptiveSizePx(15, 8);
+			flex-direction: column;
+			// justify-content: center;
+			align-items: center;
+
+			// flex-wrap: wrap;
+		}
+
+		&__phone {
+			width: adaptiveSizePx(437, 220);
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
+	.features {
+		&__feature {
+			flex-direction: row-reverse;
+		}
+
+		&__descr {
+			width: adaptiveSizePx(437, 200);
+			height: adaptiveSizePx(437, 200);
+			max-height: 84px;
+		}
+
+		&__header {
+			margin-top: adaptiveSizePx(3, 1);
+			margin-bottom: adaptiveSizePx(11, 1);
+			&_left-align {
+				text-align: left;
+			}
+		}
+		
+		&__text {
+			&_left-align {
+				text-align: left;
+			}
+		}
+	}
+	.feature-icon {
+	}
+
 }

@@ -5,6 +5,7 @@
 }
 
 body {
+	min-width: 320px;
 	margin: 0;
 	font-family: "Jost";
 	line-height: 124%;
@@ -33,13 +34,23 @@ body {
 
 .frame {
 	margin: 0 auto;
-	padding: 4vh 2vw;
+	padding: 4vh 2vw 0 2vw;
 	max-width: 1590px;
 }
 
 .violet-bg-bot {
 	background: url("/src/img/botwave.svg") no-repeat;
 	background-size: 100% 100%; // оптимизация для фаерфокса
-	height: 522px;
+	// height: 522px;
+	height: adaptiveSizePx(522, 430);
 	// object-fit: fill;
+}
+
+@media (max-width: 909px) {
+	// .frame {
+	// 	padding: 4vh 2%;
+	// }
+	.violet-bg-bot {
+		min-height: 630px;
+	}
 }
