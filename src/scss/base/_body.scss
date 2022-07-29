@@ -29,7 +29,6 @@ body {
 	background: url("/src/img/topwave.svg") no-repeat;
 	height: adaptiveSizePx(1100, 200);
 	background-size: 100% 100%; // оптимизация для фаерфокса
-	// object-fit: fill;
 }
 
 .frame {
@@ -41,16 +40,10 @@ body {
 .violet-bg-bot {
 	background: url("/src/img/botwave.svg") no-repeat;
 	background-size: 100% 100%; // оптимизация для фаерфокса
-	// height: 522px;
 	height: adaptiveSizePx(522, 430);
-	// object-fit: fill;
 }
 
-.active {
-	height: auto !important;
-	opacity: 100 !important;
-	padding: 8px 0 !important;
-}
+
 
 @media (max-width: 909px) {
 	.frame {
@@ -60,6 +53,13 @@ body {
 		// height: adaptiveSizePx(200, 1100);
 		// height: 1080px;
 		height: adaptiveSize320Px(200, 1100);
+		transition-property: height;
+		transition-duration: 0.5s;
+		// height: 100%;
+		// height: calc(adaptiveSize320Px(200, 1100) + 100px);
+	}
+	.violet-bg-top--enlarge {
+		height: calc(adaptiveSize320Px(200, 1100) + 100px);
 	}
 	.violet-bg-bot {
 		min-height: 630px;

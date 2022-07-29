@@ -59,10 +59,10 @@
 		flex-direction: column;
 		align-items: center;
 		&__description {
-			margin-top: adaptiveSize320Px(100, 30);
+			// margin-top: adaptiveSize320Px(100, 30);
+			margin-top: -160px;
 			width: adaptiveSize320Px(550, 307);
 			text-align: center;
-
 		}
 		&__header {
 			font-size: adaptiveSize320Px(48, 28);

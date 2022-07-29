@@ -109,8 +109,14 @@
 			transition-property: height, opacity, padding;
 			transition-duration: 0.5s, 0.1s, 0.1s;
 			// flex-grow: 1; // для меню в центре
-			text-align: center; // для меню в центре
+			// text-align: center; // для меню в центре
 			text-align: right; // для меню справа
+			&--active {
+				height: auto !important;
+				opacity: 100 !important;
+				padding: 8px 0 !important;
+			}
 		}
+		
 	}
 }
