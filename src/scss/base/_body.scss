@@ -46,14 +46,20 @@ body {
 	// object-fit: fill;
 }
 
+.active {
+	height: auto !important;
+	opacity: 100 !important;
+	padding: 8px 0 !important;
+}
+
 @media (max-width: 909px) {
-	// .frame {
-	// 	padding: 4vh 2%;
-	// }
+	.frame {
+		padding: 4vh 3vw 0 3vw;
+	}
 	.violet-bg-top {
 		// height: adaptiveSizePx(200, 1100);
-		height: adaptiveSize320Px(200, 1100);
 		// height: 1080px;
+		height: adaptiveSize320Px(200, 1100);
 	}
 	.violet-bg-bot {
 		min-height: 630px;

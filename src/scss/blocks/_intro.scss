@@ -59,7 +59,7 @@
 		flex-direction: column;
 		align-items: center;
 		&__description {
-			margin-top: adaptiveSize320Px(149, 37);
+			margin-top: adaptiveSize320Px(100, 30);
 			width: adaptiveSize320Px(550, 307);
 			text-align: center;
 
@@ -82,10 +82,12 @@
 			display: flex;
 			justify-content: center;
 			margin-top: 31px;
+			margin-bottom: 100px;
 		}
 		&__img {
 			// width: calc(270px + (88 + 80 * 0.7) * ((100vw - 320px) / 1920));
 			width: adaptiveSize320Px(358, 270);
+
 		}
 	}
 }

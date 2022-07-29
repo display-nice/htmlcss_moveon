@@ -1,6 +1,7 @@
 .header {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	color: $mtc;
 	&__logo {
 		vertical-align: middle;
@@ -18,7 +19,7 @@
 }
 .menu {
 	display: flex;
-	align-items: center;
+	// align-items: center;
 
 	&__list {
 		min-width: 526px;
@@ -54,6 +55,62 @@
 		}
 		path {
 			fill: $mtc;
+		}
+	}
+}
+.burger {
+	display: none;
+}
+
+@media (max-width: 909px) {
+	.header__buttons .social {
+		display: none;
+	}
+	.header {
+		display: flex;
+		flex-wrap: wrap;
+		&__logo {
+			width: 50%;
+		}
+		&__buttons {
+			min-width: auto;
+			flex-grow: 1;
+			margin-top: 10px;
+			// justify-content: center;
+			justify-content: flex-end;
+		}
+	}
+	.burger {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-end;
+		width: 50%;
+		height: 19px;
+		&__line {
+			background-color: $mtc;
+			width: 28px;
+			height: 3px;
+		}
+	}
+	.menu {
+		// width: 270px; // для меню в центре
+		justify-content: end;
+		&__list {
+			min-width: auto;
+			display: flex;
+			// flex-wrap: wrap; // для меню в центре
+			flex-direction: column; // для меню справа
+		}
+		&__item {
+			height: 0;
+			opacity: 0;
+			padding: 0;
+			transition-property: height, opacity, padding;
+			transition-duration: 0.5s, 0.1s, 0.1s;
+			// flex-grow: 1; // для меню в центре
+			text-align: center; // для меню в центре
+			text-align: right; // для меню справа
 		}
 	}
 }

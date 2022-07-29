@@ -1,6 +1,7 @@
 .functional {
 	margin-top: 2.5vw;
-	margin-top: 150px;
+	// margin-top: 300px;
+	// margin-top: adaptiveSizePx(100, 0);
 	&__header-wrapper {
 		display: flex;
 		flex-direction: column;
@@ -75,9 +76,14 @@
 	align-items: center;
 }
 
+@media (min-width: 680px) and (max-width: 909px) {
+	.functional {
+		margin-top: adaptiveSize320Px(500, 1) !important;
+	}
+}
 @media (max-width: 909px) {
 	.functional {
-
+		margin-top: adaptiveSize320Px(100, 1);
 		&__header-wrapper {
 		}
 
