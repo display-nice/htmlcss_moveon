@@ -53,6 +53,7 @@ body {
 		// height: adaptiveSizePx(200, 1100);
 		// height: 1080px;
 		height: adaptiveSize320Px(200, 1100);
+		min-height: 960px;
 		transition-property: height;
 		transition-duration: 0.5s;
 		// height: 100%;
