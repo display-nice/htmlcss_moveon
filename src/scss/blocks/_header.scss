@@ -19,8 +19,6 @@
 }
 .menu {
 	display: flex;
-	// align-items: center;
-
 	&__list {
 		min-width: 526px;
 		display: flex;
@@ -30,9 +28,19 @@
 		font-size: adaptiveSizePx(20, 16);
 		line-height: 124%;
 		border-bottom: 1px solid transparent;
-	}
-	&__item:hover {
-		border-bottom: 1px solid $mtc;
+		a {
+			text-decoration: none;
+			color: $mtc;
+		}
+		a:visited {
+			color: $mtc;			
+		}
+		a:active {
+			color: $mtc;	
+		}
+		a:hover {
+			border-bottom: 1px solid $mtc;
+		}
 	}
 }
 .social {

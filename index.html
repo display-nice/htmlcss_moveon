@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<div class="violet-bg-top">
+	<section class="violet-bg-top">
 		<div class="frame">
 			<header class="header">
 				<div class="header__logo">
@@ -27,16 +27,15 @@
 				<div class="header__buttons">
 					<nav class="menu">
 						<ul class="menu__list">
-							<li class="menu__item menu__item--active">Главная</li>
-							<li class="menu__item menu__item--active">Функционал</li>
-							<!-- <li class="menu__item menu__item--active">Загрузить</li> -->
-							<li class="menu__item menu__item--active">Подробнее</li>
-							<li class="menu__item menu__item--active">О нас</li>
-							<li class="menu__item menu__item--active">Контакты</li>
+							<li class="menu__item"><a href="#">Главная</a></li>
+							<li class="menu__item"><a href="#functional">Функционал</a></li>
+							<li class="menu__item"><a href="#intro">Подробнее</a></li>
+							<li class="menu__item"><a href="#about">О нас</a></li>
+							<li class="menu__item"><a href="#contacts">Контакты</a></li>
 						</ul>
 					</nav>
 					<ul class="social">
-						<li class="social__item">
+						<li class="social__item twitter">
 							<a class="social__link" href="#">
 								<svg class="social__icon social__icon_small" width="50" height="47" viewBox="0 0 50 47"
 									fill="none">
@@ -47,7 +46,7 @@
 								</svg>
 							</a>
 						</li>
-						<li class="social__item">
+						<li class="social__item facebook">
 							<a class="social__link" href="#">
 								<svg class="social__icon social__icon_small" width="50" height="47" viewBox="0 0 50 47"
 									fill="none">
@@ -58,7 +57,7 @@
 								</svg>
 							</a>
 						</li>
-						<li class="social__item">
+						<li class="social__item instagram">
 							<a class="social__link" href="#">
 								<svg class="social__icon social__icon_small" width="50" height="47" viewBox="0 0 50 47"
 									fill="none">
@@ -72,20 +71,20 @@
 					</ul>
 				</div>
 			</header>
-			<section class="intro">
+			<section id="intro" class="intro">
 				<div class="intro__description">
 					<h1 class="intro__header">НАЙДИ СВОЮ КОМПАНИЮ ДРУЗЕЙ</h1>
 					<p class="intro__text">С помощью приложения Moveon найди свою компанию
 						для походов в кафе, бар или для прогулок по городу</p>
 					<div class="intro__buttons">
-						<button class="store-button">
+						<button id="app-store-btn" class="store-button">
 							<svg class="store-button__icon" width="26" height="30" viewBox="0 0 26 30" fill="white">
 								<path
 									d="M18.0059 4.7455C18.9554 3.63884 19.6143 2.11953 19.6143 0.600222C19.6143 0.393896 19.5949 0.168812 19.5562 0C18.0253 0.0562708 16.165 0.994117 15.0605 2.26959C14.1885 3.22619 13.3746 4.7455 13.3746 6.28357C13.3746 6.50866 13.4133 6.7525 13.4327 6.82752C13.5296 6.84628 13.6846 6.86504 13.8396 6.86504C15.2349 6.86504 16.9789 5.9647 18.0059 4.7455ZM19.0911 7.1839C16.7657 7.1839 14.8861 8.55316 13.6846 8.55316C12.4057 8.55316 10.7004 7.25893 8.6851 7.25893C4.86763 7.25893 0.972656 10.3351 0.972656 16.0934C0.972656 19.7135 2.42601 23.5024 4.1894 25.9596C5.72027 28.0416 7.05735 29.7297 8.95639 29.7297C10.8554 29.7297 11.7081 28.5105 14.0722 28.5105C16.4557 28.5105 16.9983 29.6922 19.0911 29.6922C21.1839 29.6922 22.5597 27.854 23.8581 26.0346C25.3308 23.9526 25.9509 21.9269 25.9703 21.8143C25.854 21.7768 21.8621 20.22 21.8621 15.7933C21.8621 11.9857 25.0014 10.2788 25.1758 10.1475C23.1217 7.25893 19.9631 7.1839 19.0911 7.1839Z" />
 							</svg>
 							<p class="store-button__text">APP STORE</p>
 						</button>
-						<button class="store-button">
+						<button id="play-market-btn" class="store-button">
 							<svg class="store-button__icon" width="23" height="25" viewBox="0 0 23 25" fill="white">
 								<path
 									d="M3.54671 0.81311L12.6328 10.2768C12.8688 10.5223 13.2653 10.5223 13.5013 10.2768L15.3421 8.36047C15.6159 8.07727 15.5545 7.61471 15.21 7.42118C10.4569 4.73075 4.56624 1.3984 3.54671 0.81311ZM0.794922 1.44088C0.691081 1.6816 0.625 1.9412 0.625 2.23385V22.8841C0.625 23.1201 0.676921 23.3372 0.757161 23.5449L10.9855 12.8917C11.2121 12.6604 11.2121 12.2923 10.9855 12.0563L0.794922 1.44088ZM18.075 9.18648C17.9476 9.20536 17.8249 9.26672 17.7305 9.36585L15.1439 12.0563C14.9173 12.2876 14.9173 12.6557 15.1439 12.8917L17.7069 15.5586C17.8957 15.7568 18.2025 15.7993 18.4432 15.6624C20.2321 14.6476 21.4404 13.9679 21.4404 13.9679C22.0446 13.5997 22.3844 13.038 22.375 12.4244C22.3656 11.825 22.0163 11.268 21.4357 10.9423C21.3649 10.8999 20.1849 10.2343 18.4621 9.262C18.3441 9.1912 18.2072 9.1676 18.075 9.18648ZM13.0671 14.4871C12.9066 14.4871 12.7508 14.5485 12.6281 14.6759L3.61279 24.0594C5.16569 23.1767 10.6882 20.052 15.1864 17.5079C15.5309 17.3097 15.5923 16.8471 15.3185 16.5639L13.5013 14.6759C13.3833 14.5485 13.2275 14.4871 13.0671 14.4871Z" />
@@ -99,9 +98,9 @@
 				</div>
 			</section>
 		</div>
-	</div>
-	<div class="frame">
-		<section class="functional">
+	</section>
+	<section id="functional" class="frame">
+		<div class="functional">
 
 			<div class="functional__header-wrapper">
 				<h2 class="functional__header">ФУНКЦИОНАЛ</h2>
@@ -116,8 +115,8 @@
 							<h3 class="features__header">Присоединяйся к событиям</h3>
 							<p class="features__text">Находи интерисующии тебя события на главном экране и жми "хочу пойти"</p>
 						</div>
-						<div class="feature-icon">
-							<img src="/src/icons/paperclip.svg" alt="Скрепка">
+						<div class="features__icon">
+							<img class="paperclip" src="/src/icons/paperclip.svg" alt="Скрепка">
 						</div>
 					</li>
 
@@ -126,8 +125,8 @@
 							<h3 class="features__header">Ищи события по фильтрам</h3>
 							<p class="features__text">Для поиска событий мы предлагаем более 10 фильтров</p>
 						</div>
-						<div class="feature-icon">
-							<img src="/src/icons/calendar.svg" alt="Календарь">
+						<div class="features__icon">
+							<img class="calendar" src="/src/icons/calendar.svg" alt="Календарь">
 						</div>
 					</li>
 
@@ -137,8 +136,8 @@
 							<p class="features__text">В любом профиле видны все события которые посещал пользователь или на
 								которые планирует пойти</p>
 						</div>
-						<div class="feature-icon">
-							<img src="/src/icons/play.svg" alt="Плей">
+						<div class="features__icon">
+							<img class="play" src="/src/icons/play.svg" alt="Плей">
 						</div>
 					</li>
 				</ul>
@@ -154,8 +153,8 @@
 								новых
 								друзей</p>
 						</div>
-						<div class="feature-icon">
-							<img src="/src/icons/pencil.svg" alt="Карандаш">
+						<div class="features__icon">
+							<img class="pencil" src="/src/icons/pencil.svg" alt="Карандаш">
 						</div>
 					</li>
 
@@ -165,8 +164,8 @@
 							<p class="features__text features__text_left-align">Отмечайся на карте, чтобы быстрее находить
 								компанию</p>
 						</div>
-						<div class="feature-icon">
-							<img src="/src/icons/markonmap.svg" alt="Геометка">
+						<div class="features__icon">
+							<img class="markonmap" src="/src/icons/markonmap.svg" alt="Геометка">
 						</div>
 					</li>
 
@@ -176,22 +175,22 @@
 							<p class="features__text features__text_left-align">Общайся в чатах с друзьями, обсуждайте события
 								в беседах</p>
 						</div>
-						<div class="feature-icon">
-							<img src="/src/icons/chats.svg" alt="Чаты">
+						<div class="features__icon">
+							<img class="chats" src="/src/icons/chats.svg" alt="Чаты">
 						</div>
 					</li>
 
 				</ul>
 
 			</div>
-		</section>
-	</div>
+		</div>
+	</section>
 
-	<div class="violet-bg-bot">
+	<section class="violet-bg-bot">
 		<div class="frame">
 			<footer class="footer">
 				<div class="footer__main">
-					<div class="footer__about">
+					<div id="about" class="footer__about">
 						<h2 class="footer__title">
 							About MOVEON
 						</h2>
@@ -203,7 +202,7 @@
 							присоединятся к тебе.
 						</p>
 					</div>
-					<div class="footer__contacts">
+					<div id="contacts" class="footer__contacts">
 						<h2 class="footer__title">Наши Контакты</h2>
 						<p class="footer__text">moveon-app@mail.ru</p>
 						<p class="footer__text">businessdevelopermarket@gmail.com</p>
@@ -212,7 +211,7 @@
 					<div class="footer__social">
 						<h2 class="footer__title">Социальные сети</h2>
 						<ul class="social social_footer">
-							<li class="social__item">
+							<li class="social__item twitter">
 								<a class="social__link" href="#">
 									<svg class="social__icon" width="50" height="47" viewBox="0 0 50 47" fill="none">
 										<ellipse cx="25" cy="23.2195" rx="25" ry="23.1082" fill="white" />
@@ -222,7 +221,7 @@
 									</svg>
 								</a>
 							</li>
-							<li class="social__item">
+							<li class="social__item facebook">
 								<a class="social__link" href="#">
 									<svg class="social__icon" width="50" height="47" viewBox="0 0 50 47" fill="none">
 										<ellipse cx="25" cy="23.2197" rx="25" ry="23.1084" fill="white" />
@@ -232,7 +231,7 @@
 									</svg>
 								</a>
 							</li>
-							<li class="social__item">
+							<li class="social__item instagram">
 								<a class="social__link" href="#">
 									<svg class="social__icon" width="50" height="47" viewBox="0 0 50 47" fill="none">
 										<ellipse cx="25" cy="23.2195" rx="25" ry="23.1082" fill="white" />
@@ -245,13 +244,15 @@
 						</ul>
 					</div>
 				</div>
-				<div class="footer__line"></div>
+				<div class="footer__line-wrapper">
+					<div class="footer__line"></div>
+				</div>
 				<div class="footer__copyright">
 					<p class="footer__copyright-text">APP MOVEON @ 2021</p>
 				</div>
 			</footer>
 		</div>
-	</div>
+	</section>
 	<script src="/src/js/script.js"></script>
 </body>
 

@@ -9,6 +9,9 @@ body {
 	margin: 0;
 	font-family: "Jost";
 	line-height: 124%;
+	display: flex;
+	flex-direction: column;
+
 	h1 {
 		margin: 0;
 	}
@@ -29,40 +32,44 @@ body {
 	background: url("/src/img/topwave.svg") no-repeat;
 	height: adaptiveSizePx(1100, 200);
 	background-size: 100% 100%; // оптимизация для фаерфокса
+	padding-top: 3vh;
 }
 
 .frame {
 	margin: 0 auto;
-	padding: 4vh 2vw 0 2vw;
+	// padding: 4vh 2vw 0 2vw;
+	padding: 0 2vw;
 	max-width: 1590px;
+	height: 100%;
 }
 
 .violet-bg-bot {
 	background: url("/src/img/botwave.svg") no-repeat;
 	background-size: 100% 100%; // оптимизация для фаерфокса
+
 	height: adaptiveSizePx(522, 430);
+	margin-top: adaptiveSizePx(200, 150);
 }
 
 
 
 @media (max-width: 909px) {
 	.frame {
-		padding: 4vh 3vw 0 3vw;
+		padding: 0 3vw;
+		// padding: 4vh 3vw 0 3vw;
+		// height: 100%;
 	}
 	.violet-bg-top {
-		// height: adaptiveSizePx(200, 1100);
-		// height: 1080px;
 		height: adaptiveSize320Px(200, 1100);
 		min-height: 960px;
-		transition-property: height;
-		transition-duration: 0.5s;
-		// height: 100%;
-		// height: calc(adaptiveSize320Px(200, 1100) + 100px);
+		transition-property: min-height;
+		transition-duration: 0.1s;
 	}
-	.violet-bg-top--enlarge {
-		height: calc(adaptiveSize320Px(200, 1100) + 100px);
+	.violet-bg-top--plus-height {
+		min-height: calc(960px + 196px);
 	}
 	.violet-bg-bot {
 		min-height: 630px;
+		margin-top: 50px;
 	}
 }
