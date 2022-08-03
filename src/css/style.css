@@ -34,7 +34,7 @@ body p {
   background: url("/src/img/topwave.svg") no-repeat;
   height: calc(200px + 900 * (100vw / 1920));
   background-size: 100% 100%;
-  padding-top: 3vh;
+  padding-top: calc(1px + 45 * (100vw / 1920));
 }
 
 .frame {
@@ -57,6 +57,7 @@ body p {
   }
   .violet-bg-top {
     height: calc(1100px + -1530 * ((100vw - 320px) / 1920));
+    padding-top: calc(22px + 10.2 * ((100vw - 320px) / 1920));
     min-height: 960px;
     -webkit-transition-property: min-height;
     transition-property: min-height;
@@ -422,7 +423,7 @@ body p {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  gap: 10px;
+  gap: calc(-70px + 158 * (100vw / 1920));
 }
 .functional__phone {
   width: calc(100px + 337 * (100vw / 1920));
@@ -458,7 +459,7 @@ body p {
           flex-direction: row-reverse;
 }
 .features__descr {
-  width: calc(1px + 436 * (100vw / 1920));
+  width: calc(100px + 221 * (100vw / 1920));
   height: calc(1px + 436 * (100vw / 1920));
   display: -webkit-box;
   display: -ms-flexbox;
@@ -616,6 +617,7 @@ body p {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
+  padding-top: 40px;
 }
 .footer__line {
   background: white;

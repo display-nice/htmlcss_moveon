@@ -1,7 +1,5 @@
 .functional {
 	margin-top: 2.5vw;
-	// margin-top: 300px;
-	// margin-top: adaptiveSizePx(100, 0);
 	&__header-wrapper {
 		display: flex;
 		flex-direction: column;
@@ -22,8 +20,9 @@
 		margin-top: adaptiveSizePx(100, 50);
 		display: flex;
 		justify-content: space-evenly;
-		gap: 10px;
+		gap: adaptiveSizePx(88, -70);
 	}
+
 	&__phone {
 		width: adaptiveSizePx(437, 100);
 		padding: 0 adaptiveSizePx(15, 1);
@@ -35,7 +34,6 @@
 	flex-direction: column;
 	justify-content: space-evenly;
 	gap: 5px;
-	// width: 100%;
 	&__feature {
 		display: flex;
 		justify-content: flex-end;
@@ -46,7 +44,7 @@
 	}
 	
 	&__descr {
-		width: adaptiveSizePx(437, 1);
+		width: adaptiveSizePx(321, 100);
 		height: adaptiveSizePx(437, 1);
 		display: flex;
 		flex-direction: column;
@@ -54,7 +52,6 @@
 	}
 	
 	&__header {
-		// text-align: right;
 		font-size: adaptiveSizePx(22, 16);
 		margin-top: adaptiveSizePx(3, 1);
 		margin-bottom: adaptiveSizePx(11, 5);
@@ -64,7 +61,6 @@
 	}
 	&__text {
 		color: $ttc;
-		// text-align: right;
 		font-size: adaptiveSizePx(18, 12);
 		&--text-align {
 			text-align: right;
@@ -98,21 +94,9 @@
 		}
 	}
 }
-// .feature-icon {
-// 	border-radius: 50%;
-// 	width: adaptiveSizePx(90, 54);
-// 	height: adaptiveSizePx(90, 54);
-// 	background: linear-gradient($main2 0, $main1 50%);
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// }
 
-// @media (min-width: 680px) and (max-width: 909px) {
-// 	.functional {
-// 		margin-top: adaptiveSize320Px(500, 1) !important;
-// 	}
-// }
+// -----------------------------------320px -> 909px--------------------------------------------
+
 @media (max-width: 909px) {
 	.functional {
 		margin-top: adaptiveSize320Px(90, -60);
@@ -123,10 +107,7 @@
 		&__main {
 			margin-top: adaptiveSizePx(15, 8);
 			flex-direction: column;
-			// justify-content: center;
 			align-items: center;
-			
-			// flex-wrap: wrap;
 		}
 		
 		&__phone {

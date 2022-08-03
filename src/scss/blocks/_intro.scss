@@ -53,18 +53,14 @@
 	}
 }
 
-// -----------------------------------320px -> 909px-----------------------------------------------------------
+// -----------------------------------320px -> 909px--------------------------------------------
 
 @media (max-width: 909px) {
 	.intro {
 		flex-direction: column;
 		align-items: center;
 		margin-top: 22px;
-		// transition: all 1s;
-		// transition-property: top;
-		// transition-duration: 1s;
 		&__description {
-			// margin-top: adaptiveSize320Px(100, 30);
 			margin-top: 0px;
 			width: adaptiveSize320Px(550, 307);
 			text-align: center;
@@ -90,9 +86,7 @@
 			margin-bottom: 100px;
 		}
 		&__img {
-			// width: calc(270px + (88 + 80 * 0.7) * ((100vw - 320px) / 1920));
 			width: adaptiveSize320Px(358, 270);
-
 		}
 	}
 }
