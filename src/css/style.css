@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Jost";
-  src: url(/src/fonts/Jost-VariableFont_wght.ttf) format("truetype");
+  src: url(../../src/fonts/Jost-VariableFont_wght.ttf) format("truetype");
 }
 body {
   min-width: 320px;
@@ -31,7 +31,7 @@ body p {
 }
 
 .violet-bg-top {
-  background: url("/src/img/topwave.svg") no-repeat;
+  background: url("../../src/img/topwave.svg") no-repeat;
   height: calc(200px + 900 * (100vw / 1920));
   background-size: 100% 100%;
   padding-top: calc(1px + 45 * (100vw / 1920));
@@ -45,7 +45,7 @@ body p {
 }
 
 .violet-bg-bot {
-  background: url("/src/img/botwave.svg") no-repeat;
+  background: url("../../src/img/botwave.svg") no-repeat;
   background-size: 100% 100%;
   height: calc(430px + 92 * (100vw / 1920));
   margin-top: calc(150px + 50 * (100vw / 1920));

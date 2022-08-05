@@ -1,7 +1,7 @@
 @font-face {
 	font-family: "Jost";
 	src: 
-		url(/src/fonts/Jost-VariableFont_wght.ttf) format("truetype");
+		url(../../src/fonts/Jost-VariableFont_wght.ttf) format("truetype");
 }
 
 body {
@@ -28,7 +28,7 @@ body {
 }
 
 .violet-bg-top {
-	background: url("/src/img/topwave.svg") no-repeat;
+	background: url("../../src/img/topwave.svg") no-repeat;
 	height: adaptiveSizePx(1100, 200);
 	background-size: 100% 100%; // оптимизация для фаерфокса
 	padding-top: adaptiveSizePx(46, 1);
@@ -42,7 +42,7 @@ body {
 }
 
 .violet-bg-bot {
-	background: url("/src/img/botwave.svg") no-repeat;
+	background: url("../../src/img/botwave.svg") no-repeat;
 	background-size: 100% 100%; // оптимизация для фаерфокса
 	height: adaptiveSizePx(522, 430);
 	margin-top: adaptiveSizePx(200, 150);
