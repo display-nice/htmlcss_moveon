@@ -1,11 +1,11 @@
+import './_hint.js';
+
 const burger = document.querySelector('.burger');
 const menuItems = document.querySelectorAll('.menu__item');
 const violetBgTop = document.querySelector('.violet-bg-top');
-const introDescr = document.querySelector('.intro__description');
 const appStoreBtn = document.querySelector('#app-store-btn');
 const playMarketBtn = document.querySelector('#play-market-btn');
 const socialButtons = document.querySelectorAll('.twitter, .facebook, .instagram');
-console.log(socialButtons);
 
 burger.addEventListener('click', () => {
 	violetBgTop.classList.toggle('violet-bg-top--plus-height');
