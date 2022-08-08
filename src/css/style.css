@@ -68,7 +68,7 @@ body p {
     min-height: 1156px;
   }
   .violet-bg-bot {
-    min-height: 630px;
+    min-height: 635px;
     margin-top: 50px;
   }
 }
@@ -673,7 +673,7 @@ body p {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding-top: 170px;
-    gap: 30px;
+    gap: 25px;
   }
   .footer__about {
     width: auto;
@@ -684,6 +684,9 @@ body p {
   .footer__text {
     max-width: 450px;
     line-height: 124%;
+  }
+  .footer__line-wrapper {
+    padding-top: 28px;
   }
   .footer__line {
     background: white;

@@ -62,7 +62,7 @@
 			flex-direction: column;
 			justify-content: space-between;
 			padding-top: 170px;
-			gap: 30px;
+			gap: 25px;
 		}
 		&__about {
 			width: auto;
@@ -73,6 +73,9 @@
 		&__text {
 			max-width: 450px;
 			line-height: 124%;
+		}
+		&__line-wrapper {
+			padding-top: 28px;
 		}
 		&__line {
 			background: $mtc;

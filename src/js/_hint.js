@@ -4,7 +4,6 @@ const crossPointer = document.querySelector('#hint__pointer-close');
 const hintPointer = document.querySelector('#hint__pointer');
 const hintWrapper = document.querySelector('#hint__wrapper');
 
-
 function hideHintPointer () {
 	hintPointer.classList.add('hint__pointer--hidden');
 };
@@ -14,8 +13,5 @@ function openHintInfo () {
 	hintDesc.classList.toggle('hint__description--active');
 }
 
-
 hintBtn.onclick = openHintInfo;
-// hintBtn.ontouchend = openHintInfo;
 crossPointer.onclick = hideHintPointer;
-// crossPointer.ontouchend = hideHintPointer;
