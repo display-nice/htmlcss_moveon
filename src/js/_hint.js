@@ -5,12 +5,17 @@ const hintPointer = document.querySelector('#hint__pointer');
 const hintWrapper = document.querySelector('#hint__wrapper');
 
 
-hintBtn.onclick = function () {
+function hideHintPointer () {
+	hintPointer.classList.add('hint__pointer--hidden');
+};
+function openHintInfo () {
 	hintPointer.classList.add('hint__pointer--hidden');
 	hintWrapper.style.alignItems = "flex-start";
 	hintDesc.classList.toggle('hint__description--active');
 }
 
-crossPointer.onclick = function () {
-	hintPointer.classList.add('hint__pointer--hidden');
-}
+
+hintBtn.onclick = openHintInfo;
+hintBtn.ontouchend = openHintInfo;
+crossPointer.onclick = hideHintPointer;
+crossPointer.ontouchend = hideHintPointer;
