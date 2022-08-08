@@ -1,4 +1,4 @@
-import './_hint.js';
+// import './_hint.js';
 
 const burger = document.querySelector('.burger');
 const menuItems = document.querySelectorAll('.menu__item');
@@ -38,3 +38,26 @@ socialButtons.forEach(btn => {
 		}
 	}
 })
+
+// ----------------- hint --------------------------
+const hintBtn = document.querySelector('#hint__btn');
+const hintDesc = document.querySelector('#hint__description');
+const crossPointer = document.querySelector('#hint__pointer-close');
+const hintPointer = document.querySelector('#hint__pointer');
+const hintWrapper = document.querySelector('#hint__wrapper');
+
+
+function hideHintPointer () {
+	hintPointer.classList.add('hint__pointer--hidden');
+};
+function openHintInfo () {
+	hintPointer.classList.add('hint__pointer--hidden');
+	hintWrapper.style.alignItems = "flex-start";
+	hintDesc.classList.toggle('hint__description--active');
+}
+
+
+hintBtn.onclick = openHintInfo;
+// hintBtn.ontouchend = openHintInfo;
+crossPointer.onclick = hideHintPointer;
+// crossPointer.ontouchend = hideHintPointer;

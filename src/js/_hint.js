@@ -16,6 +16,6 @@ function openHintInfo () {
 
 
 hintBtn.onclick = openHintInfo;
-hintBtn.ontouchend = openHintInfo;
+// hintBtn.ontouchend = openHintInfo;
 crossPointer.onclick = hideHintPointer;
-crossPointer.ontouchend = hideHintPointer;
+// crossPointer.ontouchend = hideHintPointer;
